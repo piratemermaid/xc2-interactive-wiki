@@ -5,6 +5,7 @@ const {
     WEAPON_CLASSES
 } = require("../constants/bladeAttributes");
 const ITEM_TYPES = require("../constants/itemTypes");
+const affinityCharts = require("./affinityCharts");
 
 const blades = [
     {
@@ -20,7 +21,8 @@ const blades = [
             { name: FIELD_SKILLS.Fire_Mastery, maxLevel: 3 },
             { name: FIELD_SKILLS.Focus, maxLevel: 3 },
             { name: FIELD_SKILLS.Cooking, maxLevel: 3 }
-        ]
+        ],
+        affinityChart: affinityCharts.Pyra
     }
 ];
 

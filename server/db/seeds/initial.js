@@ -103,6 +103,7 @@ exports.seed = async function (knex) {
                         name: blade.name,
                         gender: blade.gender,
                         species: blade.species,
+                        affinity_chart: blade.affinityChart,
                         element_id: elementsByName[blade.element].id,
                         role_id: rolesByName[blade.role].id,
                         weapon_class_id:

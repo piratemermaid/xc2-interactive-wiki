@@ -61,6 +61,7 @@ exports.up = async function (knex) {
         table.string("name").notNullable();
         table.string("gender");
         table.string("species");
+        table.jsonb("affinity_chart");
         table
             .integer("element_id")
             .references("id")
