@@ -3,26 +3,24 @@ const _ = require("lodash");
 const TABLES = require("../tables");
 const tableDropOrder = require("../tableDropOrder");
 const blades = require("../../data/blades");
-const elements = require("../../data/elements");
-const roles = require("../../data/roles");
-const itemTypes = require("../../data/itemTypes");
 const items = require("../../data/items");
-const fieldSkills = require("../../data/fieldSkills");
-const bladeFieldSkills = require("../../data/bladeFieldSkills");
 const {
     bladeFavoriteItemTypes,
-    bladeFavoriteItems
-} = require("../../data/bladeFavoriteItems");
+    bladeFavoriteItems,
+    bladeFieldSkills
+} = require("../../data/bladeRelations");
+const { formatConstantForInsert } = require("../../utils/arrayObjectUtils");
 const {
-    arrayToObjectWithNames,
-    formatConstantForInsert
-} = require("../../utils/arrayObjectUtils");
-const { WEAPON_CLASSES } = require("../../constants/bladeAttributes");
+    WEAPON_CLASSES,
+    ELEMENTS,
+    ROLES,
+    FIELD_SKILLS
+} = require("../../constants/bladeAttributes");
 const {
-    driverComboArts,
-    weaponDriverComboArts,
     weaponDriverComboArtsForInsert
 } = require("../../data/weaponDriverComboArts");
+const ITEM_TYPES = require("../../constants/itemTypes");
+const DRIVER_COMBO_ARTS = require("../../constants/driverComboArts");
 
 exports.seed = async function (knex) {
     for (const table of tableDropOrder) {
@@ -31,28 +29,28 @@ exports.seed = async function (knex) {
 
     const elementsByName = _.keyBy(
         await knex(TABLES.ELEMENTS)
-            .insert(arrayToObjectWithNames(elements))
+            .insert(formatConstantForInsert(ELEMENTS))
             .returning("*"),
         "name"
     );
 
     const rolesByName = _.keyBy(
         await knex(TABLES.ROLES)
-            .insert(arrayToObjectWithNames(roles))
+            .insert(formatConstantForInsert(ROLES))
             .returning("*"),
         "name"
     );
 
     const fieldSkillsByName = _.keyBy(
         await knex(TABLES.FIELD_SKILLS)
-            .insert(arrayToObjectWithNames(fieldSkills))
+            .insert(formatConstantForInsert(FIELD_SKILLS))
             .returning("*"),
         "name"
     );
 
     const itemTypesByName = _.keyBy(
         await knex(TABLES.ITEM_TYPES)
-            .insert(arrayToObjectWithNames(itemTypes))
+            .insert(formatConstantForInsert(ITEM_TYPES))
             .returning("*"),
         "name"
     );
@@ -66,7 +64,7 @@ exports.seed = async function (knex) {
 
     const driverComboArtsByName = _.keyBy(
         await knex(TABLES.DRIVER_COMBO_ARTS)
-            .insert(arrayToObjectWithNames(driverComboArts))
+            .insert(formatConstantForInsert(DRIVER_COMBO_ARTS))
             .returning("*"),
         "name"
     );

@@ -13,7 +13,6 @@ function formatConstantForInsert(constant) {
 }
 
 module.exports = {
-    arrayToObjectWithNames,
     objectPropertiesToArray,
     formatConstantForInsert
 };

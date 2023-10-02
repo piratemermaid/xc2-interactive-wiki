@@ -1,6 +1,5 @@
 const { WEAPON_CLASSES } = require("../constants/bladeAttributes");
 const DRIVER_COMBO_ARTS = require("../constants/driverComboArts");
-const { objectPropertiesToArray } = require("../utils/arrayObjectUtils");
 
 const { Break, Topple, Launch, Smash } = DRIVER_COMBO_ARTS;
 
@@ -11,8 +10,6 @@ const weaponDriverComboArts = [
     }
 ];
 
-const driverComboArts = objectPropertiesToArray(DRIVER_COMBO_ARTS);
-
 let weaponDriverComboArtsForInsert = [];
 for (let weapon of weaponDriverComboArts) {
     for (let art of weapon.arts) {
@@ -20,8 +17,4 @@ for (let weapon of weaponDriverComboArts) {
     }
 }
 
-module.exports = {
-    driverComboArts,
-    weaponDriverComboArts,
-    weaponDriverComboArtsForInsert
-};
+module.exports = { weaponDriverComboArtsForInsert };
