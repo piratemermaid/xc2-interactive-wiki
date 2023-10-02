@@ -1,0 +1,11 @@
+const TABLES = require("./tables");
+
+module.exports = [
+    TABLES.BLADE_FAVORITE_ITEMS,
+    TABLES.BLADE_FAVORITE_ITEM_TYPES,
+    TABLES.BLADES,
+    TABLES.ITEMS,
+    TABLES.ITEM_TYPES,
+    TABLES.ROLES,
+    TABLES.ELEMENTS
+];
