@@ -38,6 +38,25 @@ module.exports = {
         Leaping: "Leaping",
         Lockpicking: "Lockpicking",
         Nopon_Wisdom: "Nopon Wisdom",
-        Superstrength: "Superstrength"
+        Superstrength: "Superstrength",
+        Cooking: "Cooking"
+    },
+    WEAPON_CLASSES: {
+        Aegis_Sword: "Aegis Sword",
+        Catalyst_Scimitar: "Catalyst Scimitar",
+        Twin_Rings: "Twin Rings",
+        Whipswords: "Whipswords",
+        Big_Bang_Edge: "Big Bang Edge",
+        Dual_Scythes: "Dual Scythes",
+        Drill_Shield: "Drill Shield",
+        Mech_Arms: "Mech Arms",
+        Variable_Saber: "Variable Saber",
+        Greataxe: "Greataxe",
+        Megalance: "Megalance",
+        Ether_Cannon: "Ether Cannon",
+        Shield_Hammer: "Shield Hammer",
+        Chroma_Katana: "Chroma Katana",
+        Bitball: "Bitball",
+        Knuckle_Claws: "Knuckle Claws"
     }
 };
