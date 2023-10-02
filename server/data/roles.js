@@ -1,3 +1,3 @@
 const { ROLES } = require("../constants/bladeAttributes");
 
-module.exports = [ROLES.ATTACKER, ROLES.HEALER, ROLES.TANK];
+module.exports = [ROLES.Attacker, ROLES.Healer, ROLES.Tank];

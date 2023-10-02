@@ -81,8 +81,6 @@ exports.seed = async function (knex) {
 
     await knex(TABLES.BLADE_FAVORITE_ITEMS).insert(
         bladeFavoriteItems.map(({ blade, item }) => {
-            console.log(">>", item, itemsByName[item]);
-
             return {
                 blade_id: bladesByName[blade].id,
                 item_id: itemsByName[item].id

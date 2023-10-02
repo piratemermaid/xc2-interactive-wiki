@@ -6,9 +6,9 @@ const blades = [
         name: "Pyra",
         gender: "F",
         species: "human*",
-        element: ELEMENTS.FIRE,
-        role: ROLES.ATTACKER,
-        favoriteItemTypes: [ITEM_TYPES.VEGGIES, ITEM_TYPES.LITERATURE],
+        element: ELEMENTS.Fire,
+        role: ROLES.Attacker,
+        favoriteItemTypes: [ITEM_TYPES.Veggies, ITEM_TYPES.Literature],
         favoriteItems: ["Jenerossi Tea", "Woodgrain Alphorn"]
     }
 ];

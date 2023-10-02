@@ -1,12 +1,12 @@
 const { ELEMENTS } = require("../constants/bladeAttributes");
 
 module.exports = [
-    ELEMENTS.FIRE,
-    ELEMENTS.WATER,
-    ELEMENTS.ICE,
-    ELEMENTS.WIND,
-    ELEMENTS.EARTH,
-    ELEMENTS.ELECTRIC,
-    ELEMENTS.LIGHT,
-    ELEMENTS.DARK
+    ELEMENTS.Fire,
+    ELEMENTS.Water,
+    ELEMENTS.Ice,
+    ELEMENTS.Wind,
+    ELEMENTS.Earth,
+    ELEMENTS.Electric,
+    ELEMENTS.Light,
+    ELEMENTS.Dark
 ];
