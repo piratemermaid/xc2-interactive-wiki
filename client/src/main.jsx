@@ -5,7 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import App from "./App.jsx";
 import ErrorPage from "./routes/error.jsx";
-import BladesPage from "./routes/blades.jsx";
+import BladeListPage from "./routes/bladeList.jsx";
+import BladePage from "./routes/blade.jsx";
 
 const router = createBrowserRouter([
     {
@@ -14,8 +15,12 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             {
+                path: "/blades/:name",
+                element: <BladePage />
+            },
+            {
                 path: "/blades",
-                element: <BladesPage />
+                element: <BladeListPage />
             }
         ]
     }
