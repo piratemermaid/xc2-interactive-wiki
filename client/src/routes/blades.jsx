@@ -1,3 +1,4 @@
+import AffinityChart from "../components/AffinityChart";
 import useBlades from "../hooks/react-query/queries/useBlades";
 
 export default function BladesPage() {
@@ -22,6 +23,8 @@ export default function BladesPage() {
                         <p>Element: {blade.element}</p>
                         <p>Weapon Class: {blade.weaponClass}</p>
                         <p>Role: {blade.role}</p>
+                        <h3>Affinity Chart</h3>
+                        <AffinityChart data={blade.affinityChart} />
                     </li>
                 ))}
             </ul>
