@@ -1,13 +1,12 @@
-import React from "react";
+import useBlades from "../hooks/react-query/queries/useBlades";
 
 export default function BladesPage() {
-    React.useEffect(() => {
-        async function testAPI() {
-            await fetch("/api/app");
-        }
+    const { data, isLoading } = useBlades();
 
-        testAPI();
-    }, []);
-
-    return <h1>BLADE PAGE</h1>;
+    return (
+        <div>
+            <h1>BLADE PAGE</h1>
+            <p>{isLoading ? "Loading..." : data}</p>
+        </div>
+    );
 }
