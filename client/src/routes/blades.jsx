@@ -6,7 +6,7 @@ export default function BladesPage() {
     return (
         <div>
             <h1>BLADE PAGE</h1>
-            <p>{isLoading ? "Loading..." : data}</p>
+            <p>{isLoading ? "Loading..." : data[0].name}</p>
         </div>
     );
 }
