@@ -101,11 +101,11 @@ exports.seed = async function (knex) {
                 blades.map((blade) => {
                     return {
                         name: blade.name,
-                        gender: blade.gender,
-                        species: blade.species,
-                        affinity_chart: blade.affinityChart,
+                        gender: blade.gender ?? "",
+                        species: blade.species ?? "",
+                        affinity_chart: blade.affinityChart ?? {},
                         element_id: elementsByName[blade.element].id,
-                        role_id: rolesByName[blade.role].id,
+                        role_id: blade.role ? rolesByName[blade.role].id : 1,
                         weapon_class_id:
                             weaponClassesByName[blade.weaponClass].id
                     };

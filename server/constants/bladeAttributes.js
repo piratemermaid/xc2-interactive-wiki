@@ -39,7 +39,8 @@ module.exports = {
         Lockpicking: "Lockpicking",
         Nopon_Wisdom: "Nopon Wisdom",
         Superstrength: "Superstrength",
-        Cooking: "Cooking"
+        Cooking: "Cooking",
+        Miasma_Dispersal: "Miasma Dispersal"
     },
     WEAPON_CLASSES: {
         Aegis_Sword: "Aegis Sword",
@@ -57,6 +58,10 @@ module.exports = {
         Shield_Hammer: "Shield Hammer",
         Chroma_Katana: "Chroma Katana",
         Bitball: "Bitball",
-        Knuckle_Claws: "Knuckle Claws"
+        Knuckle_Claws: "Knuckle Claws",
+        Monado: "Monado",
+        Knives: "Knives",
+        Uchigatana: "Uchigatana",
+        Dual_Swords: "Dual Swords"
     }
 };
