@@ -126,6 +126,20 @@ exports.up = async function (knex) {
         table.increments("id");
         table.string("email");
     });
+
+    await knex.schema.createTable(TABLES.USERS_BLADES, (table) => {
+        table.increments("id");
+        table
+            .integer("user_id")
+            .references("id")
+            .inTable(TABLES.USERS)
+            .onDelete("cascade");
+        table
+            .integer("blade_id")
+            .references("id")
+            .inTable(TABLES.BLADES)
+            .onDelete("cascade");
+    });
 };
 
 exports.down = async function (knex) {

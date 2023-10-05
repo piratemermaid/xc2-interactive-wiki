@@ -12,5 +12,6 @@ module.exports = {
     DRIVER_COMBO_ARTS: "driver_combo_arts",
     WEAPON_DRIVER_COMBO_ARTS: "weapon_driver_combo_arts",
 
-    USERS: "users"
+    USERS: "users",
+    USERS_BLADES: "users_blades"
 };

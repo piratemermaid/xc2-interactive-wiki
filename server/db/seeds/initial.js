@@ -21,6 +21,7 @@ const {
 } = require("../../data/weaponDriverComboArts");
 const ITEM_TYPES = require("../../constants/itemTypes");
 const DRIVER_COMBO_ARTS = require("../../constants/driverComboArts");
+const userData = require("../fakeUserData");
 
 exports.seed = async function (knex) {
     for (const table of tableDropOrder) {
@@ -139,6 +140,20 @@ exports.seed = async function (knex) {
             return {
                 blade_id: bladesByName[blade].id,
                 item_id: itemsByName[item].id
+            };
+        })
+    );
+
+    //////////////////////////
+    // FAKE USER DATA INSERT
+    //////////////////////////
+    await knex(TABLES.USERS).insert({ email: "a@a.com" });
+
+    await knex(TABLES.USERS_BLADES).insert(
+        userData.bladesObtained.map((name) => {
+            return {
+                user_id: 1,
+                blade_id: bladesByName[name].id
             };
         })
     );
