@@ -19,6 +19,9 @@ function App() {
                     <Grid item>
                         <Link to="/my_blades">My Blades</Link>
                     </Grid>
+                    <Grid item>
+                        <Link to="/team_builder">Team Builder</Link>
+                    </Grid>
                 </Grid>
             </nav>
             <Outlet />

@@ -4,7 +4,7 @@ import Page from "../components/Page";
 import useBlades from "../hooks/react-query/queries/useBlades";
 import useUserBlades from "../hooks/react-query/queries/useUserBlades";
 
-export default function MyBlades() {
+export default function UserBlades() {
     const { data: blades, bladesIsLoading } = useBlades();
     const { data: userBlades, userBladesIsLoading } = useUserBlades();
 

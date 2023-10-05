@@ -7,8 +7,9 @@ import App from "./App.jsx";
 import ErrorPage from "./routes/error.jsx";
 import BladeListPage from "./routes/bladeList.jsx";
 import BladePage from "./routes/blade.jsx";
-import MyBlades from "./routes/my_blades.jsx";
+import UserBlades from "./routes/userBlades.jsx";
 import Signin from "./routes/signin.jsx";
+import TeamBuilder from "./routes/teamBuilder.jsx";
 
 const router = createBrowserRouter([
     {
@@ -23,13 +24,18 @@ const router = createBrowserRouter([
             {
                 path: "/blades",
                 element: <BladeListPage />
+            },
+            {
+                path: "/my_blades",
+                element: <UserBlades />
+            },
+            {
+                path: "/team_builder",
+                element: <TeamBuilder />
             }
         ]
     },
-    {
-        path: "/my_blades",
-        element: <MyBlades />
-    },
+
     {
         path: "/signin",
         element: <Signin />
