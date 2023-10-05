@@ -7,6 +7,7 @@ import App from "./App.jsx";
 import ErrorPage from "./routes/error.jsx";
 import BladeListPage from "./routes/bladeList.jsx";
 import BladePage from "./routes/blade.jsx";
+import MyBlades from "./routes/my_blades.jsx";
 import Signin from "./routes/signin.jsx";
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
                 element: <BladeListPage />
             }
         ]
+    },
+    {
+        path: "/my_blades",
+        element: <MyBlades />
     },
     {
         path: "/signin",
