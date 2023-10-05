@@ -1,5 +1,5 @@
-var express = require("express");
-var app = express();
+const express = require("express");
+const bodyParser = require("body-parser");
 
 const setupDb = require("./config");
 const authRouter = require("./routes/auth");
@@ -7,6 +7,10 @@ const appDataRouter = require("./routes/appData");
 const userDataRouter = require("./routes/userData");
 
 setupDb();
+
+const app = express();
+
+app.use(bodyParser.json());
 
 app.use("/auth", authRouter);
 app.use("/app", appDataRouter);
