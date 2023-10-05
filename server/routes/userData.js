@@ -1,23 +1,13 @@
 const { Router } = require("express");
 
-const { knex } = require("../config");
-const TABLES = require("../db/tables");
-const { Blade } = require("../models");
-const { User } = require("../models/User");
+const User = require("../db/models/User");
 
 const router = new Router();
 
 router.get("/blades", async (req, res, next) => {
-    const usersQuery = await User.forge({
-        id: 1
-    }).fetch({ withRelated: ["blades"] });
-    const userBlades = usersQuery.toJSON();
+    const user = await User.query().findById(1).withGraphFetched("blades");
 
-    res.send(
-        userBlades.blades.map(({ name }) => {
-            return { name };
-        })
-    );
+    res.send(user.blades.map(({ name }) => name));
 });
 
 module.exports = router;
