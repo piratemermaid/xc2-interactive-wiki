@@ -121,6 +121,11 @@ exports.up = async function (knex) {
             .inTable(TABLES.ITEMS)
             .onDelete("cascade");
     });
+
+    await knex.schema.createTable(TABLES.USERS, (table) => {
+        table.increments("id");
+        table.string("email");
+    });
 };
 
 exports.down = async function (knex) {

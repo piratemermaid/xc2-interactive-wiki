@@ -10,5 +10,7 @@ module.exports = {
     BLADE_FIELD_SKILLS: "blade_field_skills",
     WEAPON_CLASSES: "weapon_classes",
     DRIVER_COMBO_ARTS: "driver_combo_arts",
-    WEAPON_DRIVER_COMBO_ARTS: "weapon_driver_combo_arts"
+    WEAPON_DRIVER_COMBO_ARTS: "weapon_driver_combo_arts",
+
+    USERS: "users"
 };

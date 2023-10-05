@@ -5,6 +5,7 @@ function App() {
     return (
         <>
             <nav>
+                <Link to="/signin">Signin</Link>
                 <Link to="/">Home</Link>
                 <Link to="/blades">Blades</Link>
             </nav>
