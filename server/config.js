@@ -1,9 +1,10 @@
-const knexconfig = require("./knexfile")[process.env.NODE_ENV ?? "development"];
-const knex = require("knex")(knexconfig);
-const bookshelf = require("bookshelf")(knex);
+const knex = require("knex");
+const knexfile = require("./knexfile");
+const { Model } = require("objection");
 
-module.exports = {
-    knex,
-    knexconfig,
-    bookshelf
-};
+function setupDb() {
+    const db = knex(knexfile[process.env.NODE_ENV ?? "development"]);
+    Model.knex(db);
+}
+
+module.exports = setupDb;

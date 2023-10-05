@@ -1,4 +1,5 @@
 const { db } = require("./secrets");
+const { knexSnakeCaseMappers } = require("objection");
 
 module.exports = {
     development: {
@@ -14,7 +15,8 @@ module.exports = {
         },
         seeds: {
             directory: __dirname + "/db/seeds"
-        }
+        },
+        ...knexSnakeCaseMappers
     },
 
     staging: {
@@ -30,7 +32,8 @@ module.exports = {
         },
         migrations: {
             tableName: "knex_migrations"
-        }
+        },
+        ...knexSnakeCaseMappers
     },
 
     production: {
@@ -46,6 +49,7 @@ module.exports = {
         },
         migrations: {
             tableName: "knex_migrations"
-        }
+        },
+        ...knexSnakeCaseMappers
     }
 };
