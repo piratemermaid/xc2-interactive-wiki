@@ -149,6 +149,21 @@ exports.up = async function (knex) {
             .references("id")
             .inTable(TABLES.BLADES)
             .onDelete("cascade");
+        table.boolean("is_on_team");
+    });
+
+    await knex.schema.createTable(TABLES.USERS_TEAM_DRIVERS, (table) => {
+        table.increments("id");
+        table
+            .integer("user_id")
+            .references("id")
+            .inTable(TABLES.USERS)
+            .onDelete("cascade");
+        table
+            .integer("driver_id")
+            .references("id")
+            .inTable(TABLES.DRIVERS)
+            .onDelete("cascade");
     });
 };
 

@@ -19,7 +19,8 @@ const createOrder = [
     TABLES.BLADE_FAVORITE_ITEMS,
 
     TABLES.USERS,
-    TABLES.USERS_BLADES
+    TABLES.USERS_BLADES,
+    TABLES.USERS_TEAM_DRIVERS
 ];
 
 let dropOrder = [];

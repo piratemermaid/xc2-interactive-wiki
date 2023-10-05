@@ -17,5 +17,6 @@ module.exports = {
     DRIVERS: "drivers",
 
     USERS: "users",
-    USERS_BLADES: "users_blades"
+    USERS_BLADES: "users_blades",
+    USERS_TEAM_DRIVERS: "users_team_drivers"
 };
