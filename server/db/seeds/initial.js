@@ -163,6 +163,15 @@ exports.seed = async function (knex) {
             };
         })
     );
+
+    await knex(TABLES.USERS_TEAM_DRIVERS).insert(
+        userData.driversOnTeam.map((name) => {
+            return {
+                user_id: 1,
+                driver_id: driversByName[name].id
+            };
+        })
+    );
 };
 
 // delete table and reset to start at id 1

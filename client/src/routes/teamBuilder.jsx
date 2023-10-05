@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { Grid } from "@mui/material";
 
 import useBlades from "../hooks/react-query/queries/useBlades";
@@ -36,7 +37,7 @@ export default function TeamBuilder() {
         ({ name }) => !selectedBlades.includes(name)
     );
 
-    const handleSelectBlade = (name) => {
+    const handleSelectBlade = async (name) => {
         const bladeInfo = blades.find((blade) => blade.name === name);
         const bladeElement = bladeInfo.element;
         const currentElementCount = elementCount[bladeElement];
@@ -56,6 +57,11 @@ export default function TeamBuilder() {
                 [bladeElement]: currentElementCount + 1
             });
         }
+
+        await axios.post("/api/user_data/update_team", {
+            blades: ["Mythra", "Pyra"],
+            drivers: ["Rex", "Zeke", "Tora"]
+        });
     };
 
     const BladeClickable = ({ name }) => (

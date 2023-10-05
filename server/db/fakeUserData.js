@@ -82,5 +82,6 @@ module.exports = {
         // "T-elos",
         // "Poppibuster",
         // "Crossette"
-    ]
+    ],
+    driversOnTeam: ["Rex", "Nia", "Morag"]
 };
