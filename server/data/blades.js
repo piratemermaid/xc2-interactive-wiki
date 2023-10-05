@@ -150,7 +150,7 @@ const blades = [
         driver: DRIVERS.MORAG,
         gender: "F",
         species: "Humanoid",
-        weaponClass: WEAPON_CLASSES.Whipswords,
+        weaponClass: WEAPON_CLASSES.Whipsword,
         element: ELEMENTS.Fire
         // role: ROLES.Attacker,
         // favoriteItemTypes: [ITEM_TYPES.Staple_Foods, ITEM_TYPES.Textiles],
@@ -667,6 +667,118 @@ const blades = [
         weaponClass: WEAPON_CLASSES.Bitball,
         element: ELEMENTS.Fire
         // role: ROLES.Attacker,
+        // favoriteItemTypes: [ITEM_TYPES.Staple_Foods, ITEM_TYPES.Textiles],
+        // favoriteItems: ["", ""],
+        // fieldSkills: [
+        //     { name: FIELD_SKILLS.Keen_Eye, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Ancient_Wisdom, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Forestry, maxLevel: 3 }
+        // ]
+        //affinityChart: affinityCharts.Poppi_QTπ
+    },
+    {
+        name: "Akhos",
+        // gender: "M",
+        // species: "Humanoid",
+        weaponClass: WEAPON_CLASSES.Calamity_Scythe,
+        element: ELEMENTS.Electric,
+        role: ROLES.Healer
+        // favoriteItemTypes: [ITEM_TYPES.Staple_Foods, ITEM_TYPES.Textiles],
+        // favoriteItems: ["", ""],
+        // fieldSkills: [
+        //     { name: FIELD_SKILLS.Keen_Eye, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Ancient_Wisdom, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Forestry, maxLevel: 3 }
+        // ]
+        //affinityChart: affinityCharts.Poppi_QTπ
+    },
+    {
+        name: "Patroka",
+        // gender: "F",
+        // species: "Humanoid",
+        weaponClass: WEAPON_CLASSES.Cobra_Bardiche,
+        element: ELEMENTS.Earth,
+        role: ROLES.Attacker
+        // favoriteItemTypes: [ITEM_TYPES.Staple_Foods, ITEM_TYPES.Textiles],
+        // favoriteItems: ["", ""],
+        // fieldSkills: [
+        //     { name: FIELD_SKILLS.Keen_Eye, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Ancient_Wisdom, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Forestry, maxLevel: 3 }
+        // ]
+        //affinityChart: affinityCharts.Poppi_QTπ
+    },
+    {
+        name: "Mikhail",
+        // gender: "M",
+        // species: "Humanoid",
+        weaponClass: WEAPON_CLASSES.Infinity_Fans,
+        element: ELEMENTS.Dark,
+        role: ROLES.Tank
+        // favoriteItemTypes: [ITEM_TYPES.Staple_Foods, ITEM_TYPES.Textiles],
+        // favoriteItems: ["", ""],
+        // fieldSkills: [
+        //     { name: FIELD_SKILLS.Keen_Eye, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Ancient_Wisdom, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Forestry, maxLevel: 3 }
+        // ]
+        //affinityChart: affinityCharts.Poppi_QTπ
+    },
+    {
+        name: "Obrona",
+        // gender: "F",
+        // species: "Humanoid",
+        weaponClass: WEAPON_CLASSES.Brilliant_Twinblades,
+        element: ELEMENTS.Electric,
+        role: ROLES.Attacker
+        // favoriteItemTypes: [ITEM_TYPES.Staple_Foods, ITEM_TYPES.Textiles],
+        // favoriteItems: ["", ""],
+        // fieldSkills: [
+        //     { name: FIELD_SKILLS.Keen_Eye, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Ancient_Wisdom, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Forestry, maxLevel: 3 }
+        // ]
+        //affinityChart: affinityCharts.Poppi_QTπ
+    },
+    {
+        name: "Sever",
+        // gender: "M",
+        // species: "Humanoid",
+        weaponClass: WEAPON_CLASSES.Sword_Tonfa,
+        element: ELEMENTS.Wind,
+        role: ROLES.Tank
+        // favoriteItemTypes: [ITEM_TYPES.Staple_Foods, ITEM_TYPES.Textiles],
+        // favoriteItems: ["", ""],
+        // fieldSkills: [
+        //     { name: FIELD_SKILLS.Keen_Eye, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Ancient_Wisdom, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Forestry, maxLevel: 3 }
+        // ]
+        //affinityChart: affinityCharts.Poppi_QTπ
+    },
+    {
+        name: "Perdido",
+        // gender: "M",
+        // species: "Humanoid",
+        weaponClass: WEAPON_CLASSES.Decimation_Cannon,
+        element: ELEMENTS.Fire,
+        role: ROLES.Attacker
+        // favoriteItemTypes: [ITEM_TYPES.Staple_Foods, ITEM_TYPES.Textiles],
+        // favoriteItems: ["", ""],
+        // fieldSkills: [
+        //     { name: FIELD_SKILLS.Keen_Eye, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Ancient_Wisdom, maxLevel: 3 },
+        //     { name: FIELD_SKILLS.Forestry, maxLevel: 3 }
+        // ]
+        //affinityChart: affinityCharts.Poppi_QTπ
+    },
+    {
+        name: "Cressidus",
+        // gender: "M",
+        // species: "Humanoid",
+        weaponClass: WEAPON_CLASSES.Rockrending_Gauntlets,
+        element: ELEMENTS.Earth,
+        role: ROLES.Tank
         // favoriteItemTypes: [ITEM_TYPES.Staple_Foods, ITEM_TYPES.Textiles],
         // favoriteItems: ["", ""],
         // fieldSkills: [

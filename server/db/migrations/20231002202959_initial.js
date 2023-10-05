@@ -37,22 +37,32 @@ exports.up = async function (knex) {
         table.string("name");
     });
 
-    await knex.schema.createTable(TABLES.DRIVER_COMBO_ARTS, (table) => {
+    await knex.schema.createTable(TABLES.DRIVER_COMBO_STATUSES, (table) => {
         table.increments("id");
         table.string("name");
     });
 
-    await knex.schema.createTable(TABLES.WEAPON_DRIVER_COMBO_ARTS, (table) => {
+    await knex.schema.createTable(TABLES.DRIVERS, (table) => {
         table.increments("id");
+        table.string("name");
+    });
+
+    await knex.schema.createTable(TABLES.DRIVER_COMBO_ARTS, (table) => {
+        table.increments("id");
+        table
+            .integer("driver_id")
+            .references("id")
+            .inTable(TABLES.DRIVERS)
+            .onDelete("cascade");
         table
             .integer("weapon_class_id")
             .references("id")
             .inTable(TABLES.WEAPON_CLASSES)
             .onDelete("cascade");
         table
-            .integer("driver_combo_art_id")
+            .integer("driver_status_id")
             .references("id")
-            .inTable(TABLES.DRIVER_COMBO_ARTS)
+            .inTable(TABLES.DRIVER_COMBO_STATUSES)
             .onDelete("cascade");
     });
 

@@ -16,11 +16,12 @@ const {
     ROLES,
     FIELD_SKILLS
 } = require("../../constants/bladeAttributes");
-const {
-    weaponDriverComboArtsForInsert
-} = require("../../data/weaponDriverComboArts");
 const ITEM_TYPES = require("../../constants/itemTypes");
-const DRIVER_COMBO_ARTS = require("../../constants/driverComboArts");
+const DRIVER_COMBO_STATUSES = require("../../constants/driverComboStatuses");
+const DRIVERS = require("../../constants/drivers");
+const {
+    driverComboArtsForInsert
+} = require("../../data/weaponDriverComboArts");
 const userData = require("../fakeUserData");
 
 exports.seed = async function (knex) {
@@ -63,24 +64,29 @@ exports.seed = async function (knex) {
         "name"
     );
 
-    const driverComboArtsByName = _.keyBy(
-        await knex(TABLES.DRIVER_COMBO_ARTS)
-            .insert(formatConstantForInsert(DRIVER_COMBO_ARTS))
+    const driverComboStatusesByName = _.keyBy(
+        await knex(TABLES.DRIVER_COMBO_STATUSES)
+            .insert(formatConstantForInsert(DRIVER_COMBO_STATUSES))
             .returning("*"),
         "name"
     );
 
-    await knex(TABLES.WEAPON_DRIVER_COMBO_ARTS)
-        .insert(
-            weaponDriverComboArtsForInsert.map((weapon) => {
-                return {
-                    weapon_class_id: weaponClassesByName[weapon.weaponClass].id,
-                    driver_combo_art_id: driverComboArtsByName[weapon.art].id
-                };
-            })
-        )
-        .returning("*"),
-        "name";
+    const driversByName = _.keyBy(
+        await knex(TABLES.DRIVERS)
+            .insert(formatConstantForInsert(DRIVERS))
+            .returning("*"),
+        "name"
+    );
+
+    await knex(TABLES.DRIVER_COMBO_ARTS).insert(
+        driverComboArtsForInsert.map((item) => {
+            return {
+                weapon_class_id: weaponClassesByName[item.weapon].id,
+                driver_id: driversByName[item.driver].id,
+                driver_status_id: driverComboStatusesByName[item.comboStatus].id
+            };
+        })
+    );
 
     const itemsByName = _.keyBy(
         await knex(TABLES.ITEMS)

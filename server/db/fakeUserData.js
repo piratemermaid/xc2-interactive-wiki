@@ -39,7 +39,12 @@ module.exports = {
         "Dahlia",
         "T-elos",
         "Poppibuster",
-        "Crossette"
+        "Crossette",
+        "Akhos",
+        "Patroka",
+        "Obrona",
+        "Sever",
+        "Cressidus"
     ],
     bladesMaxAffinity: [
         "Pyra",
