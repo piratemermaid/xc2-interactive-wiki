@@ -58,10 +58,11 @@ export default function TeamBuilder() {
             });
         }
 
-        await axios.post("/api/user_data/update_team", {
-            blades: ["Mythra", "Pyra"],
-            drivers: ["Rex", "Zeke", "Tora"]
+        // TODO: react-query mutations
+        await axios.post("/api/user_data/update_team_driver", {
+            driver: "Rex"
         });
+        await axios.post("/api/user_data/update_team_blade", { blade: "Pyra" });
     };
 
     const BladeClickable = ({ name }) => (
